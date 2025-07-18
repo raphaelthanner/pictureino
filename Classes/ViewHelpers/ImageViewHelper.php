@@ -113,10 +113,6 @@ class ImageViewHelper extends AbstractViewHelper
 
     protected function determineAspectRatio(): AspectRatioUtility
     {
-        if ($this->arguments['freeAspectRatio'] ?? false) {
-            return $this->aspectRatioUtiltiy->add([1, 1]);
-        }
-
         if ($aspectRatio = $this->arguments['aspectRatio']) {
             return $this->aspectRatioUtiltiy->addList($aspectRatio);
         }
